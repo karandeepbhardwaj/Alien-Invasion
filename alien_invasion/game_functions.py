@@ -12,7 +12,7 @@ def check_high_score(stats, sb):
         sb.prep_high_score()
 
 
-def check_aliens_bottom(ai_settings, screen, stats, sb, ship, aliens, bullets):
+def check_aliens_bottom(ai_settings,screen, stats, sb, ship, aliens, bullets):
     """Check if any aliens have reached the bottom of the screen"""
     screen_rect = screen.get_rect()
     for aliens in aliens.sprites():
@@ -27,8 +27,8 @@ def ship_hit(ai_settings, screen, stats, sb, ship, aliens, bullets):
     if stats.ships_left > 0:
         stats.ships_left -= 1
 
-        # Update scoreboard
         sb.prep_ships()
+
         # Empty the list of aliens and bullets.
         aliens.empty()
         bullets.empty()
